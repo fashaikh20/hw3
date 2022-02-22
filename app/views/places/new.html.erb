@@ -1,0 +1,13 @@
+<h1> Hello Faisal, Create a New Post </h1>
+
+<%= form_with model:@post do |form|  %>
+
+<p>
+    <%= form.label "name" %>
+    <%= form.text_field "name" %>
+</p>
+
+<%= form.submit "Save Post" %>
+
+<% end %>
+

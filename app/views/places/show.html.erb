@@ -1,0 +1,14 @@
+<h1> <%= @place.name %> </h1>
+
+<div class = "row">
+    <% for post in @place.posts %>
+        <div class = "col-3">
+            <p><%= post.title %> </p>
+            <p><%= post.description %> </p>
+            <p><%= post.posted_on %> </p>
+        </div>
+    <%end%>
+</div>
+
+<p><a href="/posts/new?place_id=<%@place.id%>">Create a New Post> </a> </p>
+<p><a href="/places"> Back to Places page </a> </p>
