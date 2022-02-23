@@ -7,6 +7,6 @@ class PostsController < ApplicationController
     def create
         @post = Post.new(params["post"])
         @post.save
-        redirect_to "/places"
+        redirect_to "/places/#{@post.place_id}"
     end
 end
